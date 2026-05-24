@@ -26,9 +26,24 @@ class Studentt:
     age =  0
     gender = ""
 
+    def set_info(self):
+        self.name = input("Enter the name:")
+        self.age = int(input("Enter your age:"))
+        self.gender = input("Enter your gender:")
+
     def displayy(self):
         print(f"self = {self}")
-        print(f"The name of student is{self.name}, the age is {self.age} and the gender is {self.gender} ")
+        print(f"The name of student is {self.name}, the age is {self.age} and the gender is {self.gender} ")
+    
+    def set_info_with_parameters(self, naam, age, gender):
+        self.name = naam
+        self.age = age
+        self.gender =  gender
+    
+    def set_info_with_parameters_and_annotations(self, naam: str, age: int, gender: str):
+        self.name = naam
+        self.age = age
+        self.gender =  gender
     
 s1 = Studentt()
 s1.name =  "bodmosh"
@@ -37,3 +52,12 @@ s1.gender = "male"
 
 print(s1)
 s1.displayy()
+
+
+s2 = Studentt()
+s2.set_info()
+s2.displayy()
+
+s3 = Studentt()
+s3.set_info_with_parameters("Bodmosh2", 19, "mard")
+s3.displayy()
