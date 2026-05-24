@@ -61,3 +61,19 @@ s2.displayy()
 s3 = Studentt()
 s3.set_info_with_parameters("Bodmosh2", 19, "mard")
 s3.displayy()
+
+
+#Best way to define a method
+class Car:
+    
+    #Method/Initializer 
+    def __init__(self, name: str, year: str, oil: str) -> None:
+        self.model = name
+        self.manufactured = year
+        self.oil = oil
+    
+    def display(self) -> None:
+        print(f"The name of the vehicle is {self.model}, the year it is manufactured is {self.manufactured} and its running oil type is {self.oil}")
+    
+c1 = Car("Maybach", 2026, "Petrol")
+c1.display()
